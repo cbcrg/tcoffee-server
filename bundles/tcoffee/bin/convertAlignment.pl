@@ -53,7 +53,7 @@ sub convertAlnToDir{
   my $alnCounter=0;
   my $outExtension=$$settings{outfileformat};
   while(my $aln=$in->next_aln){
-    my $out=Bio::AlignIO->new(-file=>">$outdir/".++$alnCounter.$outExtension,-format=>$$settings{outfileformat},-idlength=>30);
+    my $out=Bio::AlignIO->new(-file=>">$outdir/".++$alnCounter.$outExtension,-format=>$$settings{outfileformat},-idlength=>30, -displayname_flat=>1);
     $aln=removeUninformativeSites($aln,$settings) if($$settings{removeUninformativeSites});
     $out->write_aln($aln);
   }
@@ -64,7 +64,7 @@ sub convertAlnToFile{
   my($infile,$outfile,$settings)=@_;
   logmsg "Converting $infile ($$settings{infileFormat}) to file $outfile";
   my $in=Bio::AlignIO->new(-file=>$infile,-format=>$$settings{infileFormat},-idlength=>30);
-  my $out=Bio::AlignIO->new(-file=>">$outfile",-format=>$$settings{outfileformat},-idlength=>30);
+  my $out=Bio::AlignIO->new(-file=>">$outfile",-format=>$$settings{outfileformat},-idlength=>30,-displayname_flat=>1);
   my $alnCounter=0;
   if($$settings{concatenateAlignment}){
     my @expectedId=findAllUniqueIdsInAln($infile,$settings);

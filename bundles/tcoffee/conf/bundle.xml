@@ -1309,7 +1309,7 @@ t_coffee \
       <description>Paste or upload your Multiple Sequence Alignment in CLUSTAL, FASTA, MSF, NEXUS or PHYLIP format.</description>
       
       <field type='memo' name="alignment" label="MSA to evalute" >
-          <hint>Do not enter more than 1'000 sequences and length larger than 5'000.</hint>
+          <hint>Do not enter more than 1'000 sequences and length larger than 8'000.</hint>
 
           <validation format='TEXT' required='true' >
             <required-error>You have to enter the sequences to evaluate</required-error>
@@ -1421,7 +1421,7 @@ t_coffee \
           -score 1 
           -output ${out1} ${out2} ${out3}
           -maxnseq 1000 
-          -maxlen 5000 
+          -maxlen 8000 
           -seqnos off
           -run_name result
           -multi_core ${settings.multicore}

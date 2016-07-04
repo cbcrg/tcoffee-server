@@ -1302,7 +1302,7 @@
     <!-- IUB-IUPAC depiction code option + long queue + single URL ? + long queue / no duration + hide result.out if empty + hide stderr.txt  -->
 
     <process>
-      <bsub queue='long -R "rusage[mem=6144]" -M 6000000'>
+      <bsub queue='long -R "rusage[mem=4144]" -M 4000000'>
        <exec program="ProtoGene.pl" >
         <args>--msa ${msa} --revtrans=${revtrans} --pep --giga --lim 60 --hideBOJ --run_name=result</args>
         <logfile>stdout.txt</logfile>

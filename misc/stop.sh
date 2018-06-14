@@ -1,3 +1,3 @@
 cd /var/vhosts/tcoffee/
-sudo -u tcoffee sh -c 'source /mnt/common/etc/profile.d/vitalit_lsf.sh; /var/vhosts/tcoffee/play/play stop ./tserver'
+sudo -u tcoffee sh -c 'source /etc/profile.d/vitalit.sh; /var/vhosts/tcoffee/play/play stop ./tserver'
 cd - >/dev/null

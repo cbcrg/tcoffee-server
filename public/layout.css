@@ -134,7 +134,7 @@ html, body {
   font-family: 'Lobster';
   font-style: normal;
   font-weight: normal;
-  src: local('Lobster'), url('http://themes.googleusercontent.com/font?kit=9LpJGtNuM1D8FAZ2BkJH2Q#') format('truetype');
+  src: local('Lobster'), url('https://themes.googleusercontent.com/font?kit=9LpJGtNuM1D8FAZ2BkJH2Q#') format('truetype');
 }
 
 @font-face {
